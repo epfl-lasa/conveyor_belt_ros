@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<launch>
+
+<!-- <group ns="polishing"> -->
+	<!-- Run rqt configure for dynamic reconfiguration of parameters  -->
+	<arg name="CONVEYOR_BELT_GUI" default="true"/>
+
+    <node name="rqt_reconfigure" pkg="rqt_reconfigure" type="rqt_reconfigure" if="$(arg CONVEYOR_BELT_GUI)"/>
+
+	<arg name="CONVEYOR_BELT_MODE" default="0"/>
+	<arg name="CONVEYOR_BELT_SPEED" default="50"/>
+	<arg name="CONVEYOR_BELT_ACCELERATION" default="30"/>
+	<arg name="CONVEYOR_BELT_DECCELERATION" default="30"/>
+
+	<!-- <arg name="conveyorBeltConfig" value="1 50 30 30"/> -->
+
+	<!-- Run conveyor belt node node -->
+    <node name="conveyorBelt" pkg="test_polishing" type="conveyorBelt" 
+    	  args="$(arg CONVEYOR_BELT_MODE) $(arg CONVEYOR_BELT_SPEED) $(arg CONVEYOR_BELT_ACCELERATION) $(arg CONVEYOR_BELT_DECCELERATION)" output="screen"/>
+
+<!-- </group> -->
+
+</launch>
