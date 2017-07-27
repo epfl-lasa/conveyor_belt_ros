@@ -10,7 +10,7 @@
 #include <Eigen/Eigen>
 
 #include <dynamic_reconfigure/server.h>
-#include <test_polishing/conveyorBelt_paramsConfig.h>
+#include <conveyor_belt_ros/conveyorBelt_paramsConfig.h>
 
 // #include "visualization_msgs/MarkerArray.h"
 
@@ -48,9 +48,9 @@ class ConveyorBeltController
 		std::mutex _mutex;
 
 		// Dynamic reconfigure definition (server+callback)
-		dynamic_reconfigure::Server<test_polishing::conveyorBelt_paramsConfig> _dynRecServer;
-		dynamic_reconfigure::Server<test_polishing::conveyorBelt_paramsConfig>::CallbackType _dynRecCallback;
-		test_polishing::conveyorBelt_paramsConfig _config;
+		dynamic_reconfigure::Server<conveyor_belt_ros::conveyorBelt_paramsConfig> _dynRecServer;
+		dynamic_reconfigure::Server<conveyor_belt_ros::conveyorBelt_paramsConfig>::CallbackType _dynRecCallback;
+		conveyor_belt_ros::conveyorBelt_paramsConfig _config;
 
 
 	public:
@@ -82,7 +82,7 @@ class ConveyorBeltController
 
 		void buildOutputSerialMessage();
 
-		void dynamicReconfigureCallback(test_polishing::conveyorBelt_paramsConfig &config, uint32_t level); 
+		void dynamicReconfigureCallback(conveyor_belt_ros::conveyorBelt_paramsConfig &config, uint32_t level); 
 };
 
 

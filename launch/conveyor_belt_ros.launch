@@ -15,7 +15,7 @@
 	<!-- <arg name="conveyorBeltConfig" value="1 50 30 30"/> -->
 
 	<!-- Run conveyor belt node node -->
-    <node name="conveyorBelt" pkg="test_polishing" type="conveyorBelt" 
+    <node name="conveyorBelt" pkg="conveyor_belt_ros" type="conveyorBelt" 
     	  args="$(arg CONVEYOR_BELT_MODE) $(arg CONVEYOR_BELT_SPEED) $(arg CONVEYOR_BELT_ACCELERATION) $(arg CONVEYOR_BELT_DECCELERATION)" output="screen"/>
 
 <!-- </group> -->

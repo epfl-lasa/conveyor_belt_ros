@@ -204,7 +204,7 @@ std::string ConveyorBeltController::zeroPaddedStringConversion(int value, int de
 }
 
 
-void ConveyorBeltController::dynamicReconfigureCallback(test_polishing::conveyorBelt_paramsConfig &config, uint32_t level) 
+void ConveyorBeltController::dynamicReconfigureCallback(conveyor_belt_ros::conveyorBelt_paramsConfig &config, uint32_t level) 
 {
 
 	ROS_INFO("Reconfigure request. Updatig the parameters ...");
