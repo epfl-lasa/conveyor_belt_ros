@@ -2,7 +2,7 @@
 
 ## NOTE
 
-**The terminal of the conveyor belt must be in *Extern Command 2 (RS232)* Mode.**
+**The terminal of the conveyor belt must be in *Extern Command 2 (RS232)* Mode. This is done by pressing the bottom window in the terminal of the conveyor belt**
 
 #### Dependencies
 
